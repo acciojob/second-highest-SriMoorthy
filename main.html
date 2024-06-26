@@ -20,28 +20,30 @@
 				}
 			}
 			let M = Infinity
+			let K = 0;
 			for (let i = 0; i < arr.length; i++) {
 				if(mx == arr[i]){
 					continue
 				}
 				else{
 					const v = mx - arr[i]
-					if(arr[i]<M){
-						M = arr[i]
+					if(v < M){
+						M = v
+						K = arr[i]
 					}
 			}
-			return M	
+			return K	
 		}
 
-		function Main() {
-			var n = prompt("Enter the number of elements");
-			var arr = [];
-			for (var i = 0; i < n; i++) {
-				arr[i] = prompt("Enter element " + (i+1));
-			}
-			alert(secondHighest(arr));
-		}
-		Main();
+		// function Main() {
+		// 	var n = prompt("Enter the number of elements");
+		// 	var arr = [];
+		// 	for (var i = 0; i < n; i++) {
+		// 		arr[i] = prompt("Enter element " + (i+1));
+		// 	}
+		// 	alert(secondHighest(arr));
+		// }
+		//Main();
 	</script>
 
     <script type="text/javascript" src="./script.js">
